@@ -1,0 +1,294 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore World - Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+
+nav {
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff6b6b;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6b6b;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+section {
+  padding: 5rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  width: 100%;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input, form select, form button {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ff4757;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+cite {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #555;
+}
+
+.social-bar {
+  background: #ff6b6b;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.social-bar p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.social-bar .icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-bar .icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.social-bar .icons a:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo">ExploreWorld</div>
+    <ul>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+  </nav>  <header class="hero">
+    <div class="overlay">
+      <h1>Discover Your Next Adventure</h1>
+      <p>Exclusive Deals & Beautiful Destinations</p>
+    </div>
+  </header>  <section id="destinations">
+    <h2>Top Destinations</h2>
+    <div class="cards">
+      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34')">
+        <div class="text">Paris</div>
+      </div>
+      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')">
+        <div class="text">Bali</div>
+      </div>
+      <div class="card" style="background-image: url('https://images.unsplash.com/photo-1533106418989-88406c7cc8c8')">
+        <div class="text">New York</div>
+      </div>
+    </div>
+  </section>  <section id="offers">
+    <h2>Special Offers</h2>
+    <p>Get up to 40% off on selected destinations!</p>
+  </section>  <section id="booking">
+    <h2>Book Your Trip</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <select required>
+        <option disabled selected>Select Destination</option>
+        <option>Paris</option>
+        <option>Bali</option>
+        <option>New York</option>
+      </select>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <blockquote>
+      “The best travel experience I’ve ever had. Highly recommended!”
+    </blockquote>
+    <cite>- Zara H.</cite>
+  </section>  <section class="social-bar">
+    <p>Follow us for more adventures</p>
+    <div class="icons">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Instagram" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Facebook" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" /></a>
+    </div>
+  </section>
+</body>
+</html>
